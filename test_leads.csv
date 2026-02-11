@@ -1,0 +1,3 @@
+Sellers,Pre-Movers,first_name,last_name,email_1,email_2,phone_1,phone_1_dnc,phone_2,address,city,state,zip_code,insight
+x,,Alice,Keller,alice@example.com,,5125550100,0,,123 Market Center Dr,Austin,TX,78701,Looking to buy in 3 months.
+,x,Bob,Williams,bob@example.com,bob.work@example.com,5125550200,0,5125550300,456 Real Estate Blvd,Austin,TX,78702,Pre-mover; first-time buyer.
