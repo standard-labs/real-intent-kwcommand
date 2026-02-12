@@ -133,8 +133,17 @@ def main():
             row_data[29] = "Home"                 # Label
 
         # 5. Metadata
+        tags_list = []
         if custom_tags:
-            row_data[44] = custom_tags            # Tags
+            tags_list.append(custom_tags)
+        
+        # Auto-add "REAL INTENT.SELLERS" tag if Sellers column has "X"
+        if "Sellers" in row.index:
+            sellers_val = str(row.get("Sellers", "")).strip().upper()
+            if sellers_val == "X":
+                tags_list.append("REAL INTENT.SELLERS")
+        
+        row_data[44] = ", ".join(tags_list) if tags_list else ""  # Tags
         
         row_data[45] = source_val                 # Source
         row_data[46] = get_val("insight")         # Notes
