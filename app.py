@@ -122,7 +122,7 @@ def main():
         if not pd.isna(e2):
             row_data[19] = str(e2).strip()        # Work Email
             
-        # 4. Address (Block 1 - Indices 23-29)
+        # 4. Address (Block 1 - Indices 23-30)
         addr = get_val("address")
         if addr:
             row_data[23] = addr                   # Address line one
@@ -143,10 +143,10 @@ def main():
             if sellers_val == "X":
                 tags_list.append("REAL INTENT.SELLERS")
         
-        row_data[44] = ", ".join(tags_list) if tags_list else ""  # Tags
+        row_data[47] = ", ".join(tags_list) if tags_list else ""  # Tags
         
-        row_data[45] = source_val                 # Source
-        row_data[46] = get_val("insight")         # Notes
+        row_data[48] = source_val                 # Source
+        row_data[49] = get_val("insight")         # Notes
 
         output_rows.append(row_data)
 
